@@ -230,25 +230,12 @@ if __name__ == '__main__':
 # 1先构建词空间  Dictionary(4064 unique tokens: ['上将', '专门', '乘客', '仪式', '体验']...)
 # 2使用BOW模型向量化   corpus [[(0, 1), (1, 1), (2, 2), (3, 1),。。。
 # 3对每个词，根据tf-idf进行加权，得到加权后的向量表示
+#
 # 根据数据集获得模型
-# 4得到数据集的主题-词分布  model (得到每个词的向量）（文档转列表 再转集合去重，再转列表）
-# {'白血病': [(0, 0.1273009), (1, 0.6181468), (2, 0.12732704), (3, 0.12722531)], '婴儿': [。。。
-# 然后求文档 文档的分布的
-# 5词》向量》tf/idf加权》同第4步得到文档的分布向量 [(0, 0.033984687), (1, 0.033736005), (2, 0.8978361), (3, 0.03444325)]
-# 计算余弦距离得到结果
+# 4得到数据集的主题-词分布  model (得到每个词的向量）（文档转列表 再转集合去重，再转列表）{'白血病': [(0, 0.1273009), (1, 0.6181468), (2, 0.12732704), (3, 0.12722531)], '婴儿': [。。。
+# 5求文档的分布:词》向量》tf/idf加权》同第4步得到文档的分布向量 [(0, 0.033984687), (1, 0.033736005), (2, 0.8978361), (3, 0.03444325)]
+# 6.计算余弦距离得到结果
 
 
-# list.append(object) 向列表中添加一个对象object
-# list.extend(sequence) 把一个序列seq的内容添加到列表中
-# music_media = ['compact disc', '8-track tape', 'long playing record']
-# new_media = ['DVD Audio disc', 'Super Audio CD']
-# music_media.append(new_media)
-# print music_media
-# >>>['compact disc', '8-track tape', 'long playing record', ['DVD Audio disc', 'Super Audio CD']]
-# 使用append的时候，是将new_media看作一个对象，整体打包添加到music_media对象中。
-# music_media = ['compact disc', '8-track tape', 'long playing record']
-# new_media = ['DVD Audio disc', 'Super Audio CD']
-# music_media.extend(new_media)
-# print music_media
-# >>>['compact disc', '8-track tape', 'long playing record', 'DVD Audio disc', 'Super Audio CD']
+
 
